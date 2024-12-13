@@ -1,23 +1,18 @@
-using TMPro;
-using UnityEngine;
+using UnityEngine;                      // Подключение пространства имен UnityEngine
 
-public class PC : MonoBehaviour
+public class PC : MonoBehaviour         // Объявление класса PC, наследующего MonoBehaviour
 {
-    public int speed = 20;
+    public int speed = 20;              // Публичная переменная для скорости движения объекта
 
-
-
-    void Update()
+    void Update()                       // Метод Update, вызываемый каждый кадр
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))    // Проверка, нажата ли клавиша "W"
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
-
+            transform.Translate(Vector3.forward * Time.deltaTime * speed); // Перемещение объекта вперед
         }
     }
-
-      
 }
+
 
 //Input — получает событие ввода.
 //GetKey — отслеживает нажатие на клавишу.
