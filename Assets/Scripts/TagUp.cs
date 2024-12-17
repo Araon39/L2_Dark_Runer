@@ -15,12 +15,7 @@ public class TagUp : MonoBehaviour
         {            
             transform.localScale -= new Vector3(1f, 1f, 1f);    // Уменьшение размера объекта на 1 единицу по всем осям            
             Destroy(collision.gameObject);                      // Уничтожение объекта, с которым произошло столкновение
-        }
-               
-        if (collision.gameObject.CompareTag("Door"))            // Проверка, если столкнувшийся объект имеет тег "Door"
-        {            
-            Debug.Log("-----GameOver------");                   // Вывод сообщения "-----GameOver------" в консоль
-        }
+        }       
     }
 }
 
